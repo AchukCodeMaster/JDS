@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joint Debate Society</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/about.css" />
+  <!-- <link rel="stylesheet" href="/threecards.css"> -->
+  <link rel="stylesheet" href="/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <script>
+    // Toggle Navbar
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuOpen = document.getElementById("menu-open");
+      const menuClose = document.getElementById("menu-close");
+      const navbar = document.querySelector(".navbar");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuOpen.addEventListener("click", function () {
+        navbar.classList.add("open");
+        menuOpen.style.display = "none";
+        menuClose.style.display = "block";
+      });
+
+      menuClose.addEventListener("click", function () {
+        navbar.classList.remove("open");
+        menuClose.style.display = "none";
+        menuOpen.style.display = "block";
+      });
+    });
+  </script>
+
+  <style>
+    :root {
+      --primary-100: #d4eaf7;
+      --primary-200: #b6ccd8;
+      --primary-300: #3b3c3d;
+      --accent-100: #71c4ef;
+      --accent-200: #00668c;
+      --text-100: #1d1c1c;
+      --text-200: #313d44;
+      --bg-100: #fffefb;
+      --bg-200: #f5f4f1;
+      --bg-300: #cccbc8;
+      --card-height: 400px;
+    }
+
+    .about-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      flex-grow: 1;
+    }
+
+    .about-card {
+      background-color: var(--primary-100);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+      height: var(--card-height);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid var(--primary-200);
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      background-color: var(--bg-100);
+    }
+
+    .about-card h3 {
+      color: var(--accent-200);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+
+    .about-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-100);
+      border-radius: 2px;
+    }
+
+    .content-wrapper {
+      position: relative;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    .about-card p {
+      color: var(--text-200);
+      line-height: 1.8;
+      white-space: pre-line;
+      margin: 0;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, var(--primary-100));
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .about-card:hover .fade-overlay {
+      background: linear-gradient(to bottom, transparent, var(--bg-100));
+    }
+
+    .read-more-btn {
+      background-color: var(--accent-200);
+      color: var(--bg-100);
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .read-more-btn:hover {
+      background-color: var(--accent-100);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
+  <style>
+    /* Default Navbar Styles */
+    .navbar {
+      position: fixed;
+      top: 1rem;
+      left: 50%;
+      transform: translate(-50%);
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 2rem;
+      background-color: var(--primary-100);
+      box-shadow: 0 2px 15px #0000001a;
+      z-index: 1000;
+      border-radius: 20px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent-200);
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-200);
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 0.4rem 0.8rem;
+      border-radius: 12px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-200);
+      background-color: #71c4ef1a;
+    }
+
+    /* Contact Button */
+    .contact-btn {
+      background-color: var(--accent-200);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--accent-100);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px #0000001a;
+    }
+
+    /* Menu Icons (Hamburger Menu) */
+    .menu-icons {
+      display: none;
+      /* Hidden by default */
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--accent-200);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        /* Hide links initially */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-100);
+        padding: 1rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 15px 15px;
+      }
+
+      .nav-links a {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .menu-icons {
+        display: block;
+        /* Show the hamburger menu */
+      }
+    }
+
+    /* Toggle Navigation */
+    .navbar.open .nav-links {
+      display: flex;
+      /* Show the links when menu is open */
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">JDS</div>
+
+    <div class="menu-icons">
+      <i class="fas fa-bars" id="menu-open"></i>
+      <i class="fas fa-times" id="menu-close"></i>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <a href="contact.html" class="contact-btn">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>Welcome to Joint Debate Society</h1>
+      <p>
+        Elevating discourse and fostering critical thinking through engaging
+        in debates and public speaking. Join us as we seek to contribute to
+        the sustainable growth of our world by using debating, public speaking
+        and communication as means of solving our societal problems from a
+        blend of different ideas.
+      </p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <div class="about-cards">
+        <div class="about-card">
+          <h3>Mission</h3>
+          <div class="content-wrapper">
+            <p>
+              At Joint Debate Society, we seek to empower young people with
+              the art of public speaking, critical thinking, and the ability
+              to do research in order to make informed decisions. We also need
+              to use debating and public speaking as the platforms to
+              contribute to peaceful coexistence, social networking, and peer
+              to peer learning. we aim at raising leaders who are capable of
+              solving their societal problems and contribute to the
+              sustainable world by accepting and challenging different ideas
+              without resorting to conflict.
+            </p>
+            <div class="fade-overlay"></div>
+          </div>
+          <a href="about.html#mission" class="read-more-btn">Read More</a>
+        </div>
+
+        <div class="about-card">
+          <h3>Vision</h3>
+          <div class="content-wrapper">
+            <p>
+              We envisage a South Sudan, Africa, and a world where young
+              people have better communication skills, sharp thoughts, and the
+              ability to make informed decisions regarding their own societal
+              problems — where different ideologies don't bring conflicts but
+              rather an opportunity to accept them and use them meaningfully.
+            </p>
+            <div class="fade-overlay"></div>
+          </div>
+          <a href="about.html#vision" class="read-more-btn">Read More</a>
+        </div>
+
+        <div class="about-card">
+          <h3>Objectives</h3>
+          <div class="content-wrapper">
+            <p>
+              1. To nurture young people and students with debating and
+              communication skills so that they can become better leaders. 2.
+              To use debating and public speaking as a platform for young
+              people to contribute towards a sustainable future by allowing
+              them to solve problems critical to their societies. 3. To instil
+              the spirit of doing research and build the spirit of teamwork
+              and collaboration among the debaters. 4. To create a platform
+              that allows students and young people to carry out public
+              awareness on global challenges. 5. Promotion of understanding by
+              accepting the existing diversity in different arguments. 6. To
+              build positive discourse in interaction.
+            </p>
+            <div class="fade-overlay"></div>
+          </div>
+          <a href="about.html#objectives" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <main class="about-page">
+      <div class="about-container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="img/JUBA SCHOOLS DEBATE CHAMPIONSHIP 2024—SECOND EDITION/JSDC24 (30).jpg"
+              alt="Junub Debate Society" />
+          </div>
+          <div class="about-text">
+            <h1>Junub Debate Society</h1>
+            <p>
+              Joint Debate Society-JDS is a nonprofit organization motivated
+              to enhance the art of public speaking, build confidence among
+              young people, and contribute to the national building through
+              allowing young people in schools to engage themselves in a
+              positive discourse while improving their ability to think
+              critically and use their diverse ideas to shape the globe in to
+              a better place . We work in such a way that looks at debating as
+              not a platform for fun but as an opportunity to build national
+              cohesion and build social interactions among different young
+              people who come from different backgrounds — in so doing, we aim
+              to promote peace and togetherness and solving other pressing
+              issues around their communities.
+            </p>
+          </div>
+        </div>
+
+        <div class="founder-section">
+          <div class="founder-profile">
+            <div class="founder-image">
+              <img src="img/ceo/DSC_9685.JPG" alt="Mach Riak" />
+            </div>
+            <div class="founder-info">
+              <h2>Mach Riak</h2>
+              <p class="founder-title">Founder & Executive Director</p>
+              <p class="founder-quote">
+                "Through debate, we don't just exchange words; we exchange
+                ideas that shape the future of our nation."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="projects" class="section">
+      <h2>Our Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <i class="fas fa-users fa-3x" style="color: var(--accent-200); margin-bottom: 1rem"></i>
+          <h3>Junub Debate Academy</h3>
+          <p>
+            Fostering critical thinking and leadership through comprehensive
+            debate training programs.
+          </p>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-trophy fa-3x" style="color: var(--accent-200); margin-bottom: 1rem"></i>
+          <h3>School Championships</h3>
+          <p>
+            Organizing regional and national debate competitions for schools
+            across South Sudan.
+          </p>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-microphone fa-3x" style="color: var(--accent-200); margin-bottom: 1rem"></i>
+          <h3>Radio Talk Shows</h3>
+          <p>
+            Engaging the community through thought-provoking radio debates and
+            discussions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="featured-gallery">
+      <h2>Featured Gallery</h2>
+      <div class="gallery-preview">
+        <div class="gallery-preview-item">
+          <img src="img/Debate during the celebration of the international youth day 2024/IYD (1).jpg"
+            alt="Training Session" />
+        </div>
+        <div class="gallery-preview-item">
+          <img src="img/East African Debating championship 2024/EADC (10).jpg" alt="Debate Competition" />
+        </div>
+        <div class="gallery-preview-item">
+          <img src="img/JUBA SCHOOLS DEBATE CHAMPIONSHIP 2024—SECOND EDITION/JSDC24 (13).jpg" alt="Workshop" />
+        </div>
+      </div>
+      <a href="gallery.html" class="view-more-btn">View More</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About JDS</h3>
+        <p>
+          Joint Debate Society is dedicated to fostering critical thinking and
+          effective communication through structured debate and public
+          speaking.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="footer-links contact-info">
+          <li title="jointdebatesociety@gmail.com">
+            Email: jointdebatesociety@gmail.com
+          </li>
+          <li>Phone: +211 123 456 789</li>
+          <li>Address: Juba, South Sudan</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <p>
+          Stay in the loop with all our updates, events, and
+          insights-subscribe to our newsletter
+        </p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email" required />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Joint Debate Society. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="about.js"></script>
+
+  <script src="/main.js"></script>
+</body>
+
+</html>

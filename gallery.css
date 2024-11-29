@@ -1,0 +1,234 @@
+/* Gallery Page Styles */
+.gallery-page {
+  padding: 120px 2rem 4rem;
+  background-color: var(--bg-100);
+}
+
+.gallery-page h1 {
+  text-align: center;
+  color: var(--accent-200);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.gallery-folders {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.folder {
+  background-color: var(--bg-200);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.folder:hover {
+  transform: translateY(-5px);
+}
+
+.folder-toggle {
+  display: none;
+}
+
+.folder-label {
+  display: block;
+  padding: 1.5rem;
+  background-color: var(--primary-100);
+  color: var(--accent-200);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.folder-label:hover {
+  background-color: var(--primary-200);
+}
+
+.folder-label i {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.image-grid {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-100);
+  z-index: 1000;
+  padding: 4rem 1rem 1rem;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.folder-toggle:checked + .folder-label + .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.5rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-grid {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--accent-200);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: background-color 0.3s ease;
+}
+
+.close-grid:hover {
+  background-color: var(--accent-100);
+}
+
+.folder-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-100);
+  padding: 1rem 4rem;
+  text-align: center;
+  z-index: 1001;
+  color: var(--accent-200);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1002;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+body.folder-open {
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-folders {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-page {
+    padding: 100px 1rem 2rem;
+  }
+
+  .gallery-page h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-folders {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .folder-label {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .folder-toggle:checked + .folder-label + .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.5rem;
+    padding: 4rem 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .folder-toggle:checked + .folder-label + .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-page h1 {
+    font-size: 1.8rem;
+  }
+}
