@@ -5,34 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joint Debate Society</title>
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="/about.css" />
-  <!-- <link rel="stylesheet" href="/threecards.css"> -->
-  <link rel="stylesheet" href="/responsive.css">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-  <script>
-    // Toggle Navbar
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuOpen = document.getElementById("menu-open");
-      const menuClose = document.getElementById("menu-close");
-      const navbar = document.querySelector(".navbar");
-      const navLinks = document.querySelector(".nav-links");
-
-      menuOpen.addEventListener("click", function () {
-        navbar.classList.add("open");
-        menuOpen.style.display = "none";
-        menuClose.style.display = "block";
-      });
-
-      menuClose.addEventListener("click", function () {
-        navbar.classList.remove("open");
-        menuClose.style.display = "none";
-        menuOpen.style.display = "block";
-      });
-    });
-  </script>
-
   <style>
     :root {
       --primary-100: #d4eaf7;
@@ -151,117 +126,6 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
   </style>
-
-  <style>
-    /* Default Navbar Styles */
-    .navbar {
-      position: fixed;
-      top: 1rem;
-      left: 50%;
-      transform: translate(-50%);
-      width: 95%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 2rem;
-      background-color: var(--primary-100);
-      box-shadow: 0 2px 15px #0000001a;
-      z-index: 1000;
-      border-radius: 20px;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-
-    .logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--accent-200);
-    }
-
-    /* Navigation Links */
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-200);
-      font-weight: 500;
-      transition: color 0.3s ease;
-      padding: 0.4rem 0.8rem;
-      border-radius: 12px;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent-200);
-      background-color: #71c4ef1a;
-    }
-
-    /* Contact Button */
-    .contact-btn {
-      background-color: var(--accent-200);
-      color: #fff;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 15px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    .contact-btn:hover {
-      background-color: var(--accent-100);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px #0000001a;
-    }
-
-    /* Menu Icons (Hamburger Menu) */
-    .menu-icons {
-      display: none;
-      /* Hidden by default */
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--accent-200);
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        /* Hide links initially */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-100);
-        padding: 1rem 0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 15px 15px;
-      }
-
-      .nav-links a {
-        padding: 1rem;
-        text-align: center;
-      }
-
-      .menu-icons {
-        display: block;
-        /* Show the hamburger menu */
-      }
-    }
-
-    /* Toggle Navigation */
-    .navbar.open .nav-links {
-      display: flex;
-      /* Show the links when menu is open */
-    }
-  </style>
-
 </head>
 
 <body>
@@ -274,7 +138,7 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="project.html">Projects</a></li>
       <li><a href="gallery.html">Gallery</a></li>
@@ -358,8 +222,7 @@
       <div class="about-container">
         <div class="about-content">
           <div class="about-image">
-            <img src="img/JUBA SCHOOLS DEBATE CHAMPIONSHIP 2024—SECOND EDITION/JSDC24 (30).jpg"
-              alt="Junub Debate Society" />
+            <img src="img/JSDC24-second-edition/JSDC24 (20).jpg" alt="Junub Debate Society" />
           </div>
           <div class="about-text">
             <h1>Junub Debate Society</h1>
@@ -398,7 +261,7 @@
       </div>
     </main>
 
-    <section id="projects" class="section">
+    <!-- <section id="projects" class="section">
       <h2>Our Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
@@ -426,20 +289,19 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="gallery" class="featured-gallery">
       <h2>Featured Gallery</h2>
       <div class="gallery-preview">
         <div class="gallery-preview-item">
-          <img src="img/Debate during the celebration of the international youth day 2024/IYD (1).jpg"
-            alt="Training Session" />
+          <img src="img/TIYD/IYD (6).jpg" alt="Training Session" />
         </div>
         <div class="gallery-preview-item">
-          <img src="img/East African Debating championship 2024/EADC (10).jpg" alt="Debate Competition" />
+          <img src="img/JSDC24-second-edition/JSDC24 (16).jpg" alt="Debate Competition" />
         </div>
         <div class="gallery-preview-item">
-          <img src="img/JUBA SCHOOLS DEBATE CHAMPIONSHIP 2024—SECOND EDITION/JSDC24 (13).jpg" alt="Workshop" />
+          <img src="img/EADC24/EADC (7).jpg" alt="Workshop" />
         </div>
       </div>
       <a href="gallery.html" class="view-more-btn">View More</a>
@@ -494,13 +356,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Joint Debate Society. All rights reserved.</p>
+      <p>&copy; 2024 Joint Debate Society. All rights reserved. Made and Powered by <b>Pixel Pulse</b></p>
     </div>
   </footer>
-
-  <script src="about.js"></script>
-
   <script src="/main.js"></script>
+  <script src="js/about.js"></script>
+
 </body>
 
 </html>

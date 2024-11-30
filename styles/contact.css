@@ -1,4 +1,4 @@
-Contact Page Styles .contact-page {
+.contact-page {
   padding: 120px 2rem 4rem;
   background-color: var(--bg-100);
 }
@@ -7,6 +7,7 @@ Contact Page Styles .contact-page {
   text-align: center;
   color: var(--accent-200);
   margin-bottom: 3rem;
+  margin-top: 1rem;
   font-size: 2.5rem;
 }
 
