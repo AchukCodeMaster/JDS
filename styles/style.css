@@ -95,6 +95,10 @@ body {
   display: none;
 }
 
+.mobile-actions {
+  display: none;
+}
+
 /* Mobile Navigation */
 @media screen and (max-width: 768px) {
   .navbar {
