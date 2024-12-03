@@ -2,7 +2,7 @@ const galleryData = [
   {
     id: 1,
     title: "Training and Inter Class Debates",
-    imageUrl: "../img/training-inter-class/tnl8.jpg",
+    imageUrl: "/img/training-inter-class/tnl8.jpg",
     description:
       "Students engaging in training sessions and inter-class debate competitions.",
     images: [
