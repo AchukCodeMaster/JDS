@@ -241,14 +241,14 @@ main {
   font-size: 1.1rem;
 }
 
-.projects-grid {
+.tournament-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
 
-.project-card {
+.tournament-card {
   background-color: var(--bg-200);
   padding: 1.5rem;
   border-radius: 20px;
@@ -256,7 +256,7 @@ main {
   transition: transform 0.3s ease;
 }
 
-.project-card:hover {
+.tournament-card:hover {
   transform: translateY(-5px);
 }
 
@@ -309,7 +309,7 @@ h2 {
   }
 }
 
-.projects-grid {
+.tournament-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -317,7 +317,7 @@ h2 {
   gap: 2rem;
 }
 
-.project-card {
+.tournament-card {
   background-color: var(--bg-200);
   padding: 2rem;
   border-radius: 15px;
@@ -326,17 +326,17 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-.project-card:hover {
+.tournament-card:hover {
   transform: translateY(-5px);
 }
 
-.project-card h3 {
+.tournament-card h3 {
   color: var(--accent-200);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.project-card p {
+.tournament-card p {
   color: var(--text-200);
   line-height: 1.6;
 }
