@@ -2,18 +2,18 @@ const galleryData = [
   {
     id: 1,
     title: "Training and Inter Class Debates",
-    imageUrl: "/img/training-inter-class/tnl8.jpg",
+    imageUrl: "./img/training-inter-class/tnl8.jpg",
     description:
       "Students engaging in training sessions and inter-class debate competitions.",
     images: [
-      "../img/training-inter-class/tnl1.jpg",
-      "../img/training-inter-class/tnl2.jpg",
-      "../img/training-inter-class/tnl3.jpg",
-      "../img/training-inter-class/tnl4.jpg",
-      "../img/training-inter-class/tnl5.jpg",
-      "../img/training-inter-class/tnl6.jpg",
-      "../img/training-inter-class/tnl7.jpg",
-      "../img/training-inter-class/tnl8.jpg",
+      "./img/training-inter-class/tnl1.jpg",
+      "./img/training-inter-class/tnl2.jpg",
+      "./img/training-inter-class/tnl3.jpg",
+      "./img/training-inter-class/tnl4.jpg",
+      "./img/training-inter-class/tnl5.jpg",
+      "./img/training-inter-class/tnl6.jpg",
+      "./img/training-inter-class/tnl7.jpg",
+      "./img/training-inter-class/tnl8.jpg",
     ],
   },
   {
