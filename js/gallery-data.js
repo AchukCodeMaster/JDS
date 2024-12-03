@@ -19,7 +19,7 @@ const galleryData = [
   {
     id: 2,
     title: "Radio Talk Show and Debates",
-    imageUrl: "../img/radio-talk-show-debate/rts8.jpg",
+    imageUrl: "./img/radio-talk-show-debate/rts8.jpg",
     description:
       "Live radio debates and discussions featuring our talented debaters.",
     images: [
@@ -35,7 +35,7 @@ const galleryData = [
   {
     id: 3,
     title: "International Youth Day Debates 2024",
-    imageUrl: "../img/international-youth-day/IYD7.jpg",
+    imageUrl: "./img/international-youth-day/IYD7.jpg",
     description:
       "Special debate series celebrating International Youth Day 2024.",
     images: [
@@ -52,7 +52,7 @@ const galleryData = [
   {
     id: 4,
     title: "Juba Schools Debate Championship 2024",
-    imageUrl: "../img/juba-schools-debate24/JSDC24 (16).jpg",
+    imageUrl: "./img/juba-schools-debate24/JSDC24 (16).jpg",
     description:
       "The latest edition of our flagship schools debate championship.",
     images: [
@@ -91,7 +91,7 @@ const galleryData = [
   {
     id: 5,
     title: "Juba Schools Debate Championship 2023",
-    imageUrl: "/img/juba-schools-debate23/JSDC (6).jpg",
+    imageUrl: "./img/juba-schools-debate23/JSDC (6).jpg",
     description: "Highlights from last year's successful debate championship.",
     images: [
       "./img/juba-schools-debate23/JSDC (1).jpg",
@@ -116,7 +116,7 @@ const galleryData = [
   {
     id: 6,
     title: "East African Debating Championship 2024",
-    imageUrl: "../img/east-african-debating/east-african-debating1.jpg",
+    imageUrl: "./img/east-african-debating/east-african-debating1.jpg",
     description:
       "Regional championship featuring top debaters from East Africa.",
     images: [
