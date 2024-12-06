@@ -9,7 +9,7 @@ export const tournaments = [
     nextDate: "2024-12-15",
     participatingSchools: 39,
     targetSchools: 100,
-    lastWinner: "Juba Day Secondary School",
+    lastWinner: "To be determined",
   },
   {
     id: "2",
