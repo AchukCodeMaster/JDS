@@ -5,9 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joint Debate Society</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tournament/css/styles.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="/testimonials-section/styles/main.css">
   <style>
     :root {
       --primary-100: #d4eaf7;
@@ -246,10 +251,10 @@
         <div class="founder-section">
           <div class="founder-profile">
             <div class="founder-image">
-              <img src="img/ceo/DSC_9685.JPG" alt="Mach Riak" />
+              <img src="img/ceo/founder-executive.JPG" alt="Mach Riak" />
             </div>
             <div class="founder-info">
-              <h2>Mach Riak</h2>
+              <h2>Mach Riak Garang</h2>
               <p class="founder-title">Founder & Executive Director</p>
               <p class="founder-quote">
                 "Through debate, we don't just exchange words; we exchange
@@ -261,35 +266,64 @@
       </div>
     </main>
 
-    <!-- <section id="tournament" class="section">
-      <h2>Our tournament</h2>
-      <div class="tournament-grid">
-        <div class="tournament-card">
-          <i class="fas fa-users fa-3x" style="color: var(--accent-200); margin-bottom: 1rem"></i>
-          <h3>Junub Debate Academy</h3>
-          <p>
-            Fostering critical thinking and leadership through comprehensive
-            debate training programs.
-          </p>
+    <!--Tournament show case starts-->
+    <section class="tournament-showcase-section">
+      <div class="container-tournament">
+        <div class="header-tournament">
+          <span class="badge">Our Tournaments</span>
+          <h2>Every Child Deserves to Participate</h2>
+          <p>Join our prestigious debate tournaments and be part of a transformative experience that shapes future
+            leaders.</p>
         </div>
-        <div class="tournament-card">
-          <i class="fas fa-trophy fa-3x" style="color: var(--accent-200); margin-bottom: 1rem"></i>
-          <h3>School Championships</h3>
-          <p>
-            Organizing regional and national debate competitions for schools
-            across South Sudan.
-          </p>
-        </div>
-        <div class="tournament-card">
-          <i class="fas fa-microphone fa-3x" style="color: var(--accent-200); margin-bottom: 1rem"></i>
-          <h3>Radio Talk Shows</h3>
-          <p>
-            Engaging the community through thought-provoking radio debates and
-            discussions.
-          </p>
+        <div class="tournament-grid-layout" id="tournamentGrid">
+          <!-- Tournament cards will be inserted here by JavaScript -->
         </div>
       </div>
-    </section> -->
+    </section>
+    <!--tournament show case ends-->
+    <!--Debator show case starts-->
+    <section class="debaters-showcase-section">
+      <div class="container-tournament">
+        <div class="header-tournament">
+          <span class="badge">Hall of Fame</span>
+          <h2>Our Most Decorated Debaters</h2>
+        </div>
+        <div class="slider-container-tournament">
+          <div class="slider-tournament" id="debaterSlider">
+            <!-- Debater slides will be inserted here by JavaScript -->
+          </div>
+          <div class="slider-buttons">
+            <button class="slider-btn prev-btn" id="prevBtn">&lt;</button>
+            <button class="slider-btn next-btn" id="nextBtn">&gt;</button>
+          </div>
+          <div class="slider-dots" id="sliderDots">
+            <!-- Dots will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Debator show case ends-->
+
+
+
+
+
+
+    <div id="app">
+
+      <div class="testimonials-header">
+        <span class="badge">Testimonials</span>
+        <h1>Voices from our debaters</h1>
+      </div>
+
+      <section class="testimonials-section" tabindex="0">
+        <div class="testimonial-card" role="region">
+
+          <!-- Testimonial content will be inserted here by JavaScript -->
+        </div>
+      </section>
+    </div>
 
     <section id="gallery" class="featured-gallery">
       <h2>Featured Gallery</h2>
@@ -359,8 +393,14 @@
       <p>&copy; 2024 Joint Debate Society. All rights reserved. Made and Powered by <b>Pixel Pulse</b></p>
     </div>
   </footer>
+  <script type="module" src="/tournament/js/main.js"></script>
+  <script src="js/testimonial-data.js"></script>
+  <script src="js/testimonial-manager.js"></script>
   <script src="main.js"></script>
+  <script type="module" src="/js/main.js"></script>
   <script src="js/about.js"></script>
+  <script type="module" src="testimonials-section/js/main.js"></script>
+
 
 </body>
 

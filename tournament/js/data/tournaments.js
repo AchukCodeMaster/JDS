@@ -1,0 +1,36 @@
+export const tournaments = [
+  {
+    id: "1",
+    code: "SSSDC",
+    name: "South Sudan School Debate Championships",
+    description:
+      "The premier national debate competition for secondary schools",
+    lastHosted: "2023-12-15",
+    nextDate: "2024-12-15",
+    participatingSchools: 39,
+    targetSchools: 100,
+    lastWinner: "Juba Day Secondary School",
+  },
+  {
+    id: "2",
+    code: "JSDC",
+    name: "Juba Schools Debating Championships",
+    description: "Regional championship for schools in Juba",
+    lastHosted: "2024-02-20",
+    nextDate: "2025-04-20",
+    participatingSchools: 28,
+    targetSchools: 50,
+    lastWinner: "Venus Star High School",
+  },
+  {
+    id: "3",
+    code: "JDA-Open",
+    name: "Junub Debate Academy Open Tournament",
+    description: "Open tournament for all debate enthusiasts",
+    lastHosted: "2024-01-10",
+    nextDate: "2024-12-16",
+    participatingSchools: 32,
+    targetSchools: 50,
+    lastWinner: "To be determined",
+  },
+];

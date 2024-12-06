@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const galleryGrid = document.getElementById('galleryGrid');
-    const modal = new Modal();
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryGrid = document.getElementById("galleryGrid");
+  const modal = new Modal();
 
-    function createFolderElement(folder) {
-        return `
+  function createFolderElement(folder) {
+    return `
             <div class="folder" data-id="${folder.id}">
                 <div class="folder-header">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -17,26 +17,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="folder-description">${folder.description}</p>
             </div>
         `;
-    }
+  }
 
-    function renderGallery() {
-        galleryGrid.innerHTML = galleryData
-            .map(folder => createFolderElement(folder))
-            .join('');
-    }
+  function renderGallery() {
+    galleryGrid.innerHTML = galleryData
+      .map((folder) => createFolderElement(folder))
+      .join("");
+  }
 
-    function handleFolderClick(event) {
-        const folder = event.target.closest('.folder');
-        if (folder) {
-            const folderId = parseInt(folder.dataset.id);
-            const folderData = galleryData.find(f => f.id === folderId);
-            if (folderData) {
-                modal.open(folderData);
-            }
-        }
+  function handleFolderClick(event) {
+    const folder = event.target.closest(".folder");
+    if (folder) {
+      const folderId = parseInt(folder.dataset.id);
+      const folderData = galleryData.find((f) => f.id === folderId);
+      if (folderData) {
+        modal.open(folderData);
+      }
     }
+  }
 
-    // Initialize gallery and event listeners
-    renderGallery();
-    galleryGrid.addEventListener('click', handleFolderClick);
+  // Initialize gallery and event listeners
+  renderGallery();
+  galleryGrid.addEventListener("click", handleFolderClick);
 });
+
+//Testimonial Manager
