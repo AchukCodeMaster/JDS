@@ -528,6 +528,18 @@ h2 {
   }
 }
 
+/* PixelPulse styles */
+
+footer a {
+  text-decoration: none;
+  color: var(--accent-200);
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--accent-100);
+}
+
 @media (max-width: 480px) {
   .footer-content {
     grid-template-columns: 1fr;
