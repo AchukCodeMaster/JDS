@@ -41,4 +41,4 @@ document.addEventListener("DOMContentLoaded", () => {
   galleryGrid.addEventListener("click", handleFolderClick);
 });
 
-//Testimonial Manager
+//Emailjs

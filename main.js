@@ -99,3 +99,5 @@ menuClose.addEventListener("click", () => {
   menuClose.classList.remove("active");
   menuOpen.classList.remove("active");
 });
+
+//Newsletters Emailjs

@@ -9,7 +9,7 @@ export const debaters = [
   },
   {
     id: "2",
-    name: "Victor Moses Cholic",
+    name: "Victor Moses Dholic",
     image: "./tournament/images/victor.jpg",
     achievement: "2 times JSDC Winner",
     description: "Overall Best Speaker at JSDC 2024",

@@ -17,7 +17,7 @@ export const testimonials = [
   },
   {
     id: 3,
-    name: "Seven Giir",
+    name: "Steven Giir",
     role: "Venus Star High School",
     content:
       "The Joint Debate Society taught me the art of persuasion and the power of listening. It has greatly improved my confidence in debating and public presentations.",

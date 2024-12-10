@@ -55,6 +55,10 @@ body {
   padding: 0;
 }
 
+.contact-link {
+  display: none;
+}
+
 .nav-links a {
   text-decoration: none;
   color: var(--text-200);
@@ -110,6 +114,10 @@ body {
     z-index: 102;
   }
 
+  .contact-link {
+    display: block;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -121,6 +129,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.5s ease-in-out;
+    border-radius: 16px;
     z-index: 101;
   }
 
@@ -274,7 +283,7 @@ h2 {
     padding: 0.8rem;
   }
 
-  .nav-links {
+  .nav-links .contact-link {
     margin: 0.8rem 0;
     flex-direction: column;
     text-align: center;
