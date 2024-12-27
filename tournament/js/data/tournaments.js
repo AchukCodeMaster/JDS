@@ -31,6 +31,6 @@ export const tournaments = [
     nextDate: "2024-12-16",
     participatingSchools: 32,
     targetSchools: 50,
-    lastWinner: "To be determined",
+    lastWinner: "Team Untamed",
   },
 ];

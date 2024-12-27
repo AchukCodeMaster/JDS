@@ -32,7 +32,7 @@ export const testimonials = [
     avatar: "./img/testimonials/testimonial (9).jpg",
   },
   {
-    id: 4,
+    id: 5,
     name: "Agoot Rebecca Mayol",
     role: "King's Secondary School",
     content:
@@ -40,7 +40,7 @@ export const testimonials = [
     avatar: "./img/testimonials/testimonial (6).jpg",
   },
   {
-    id: 4,
+    id: 6,
     name: "Victor Moses Dholic",
     role: "Venus Star High School",
     content:
@@ -48,7 +48,7 @@ export const testimonials = [
     avatar: "./img/testimonials/testimonial (4).jpg",
   },
   {
-    id: 4,
+    id: 7,
     name: "Kuch Makeer Kuch",
     role: "Salaam Secondary School",
     content:
