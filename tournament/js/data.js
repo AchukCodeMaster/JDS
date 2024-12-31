@@ -28,7 +28,7 @@ export const tournaments = [
     name: "Junub Debate Academy Open Tournament",
     description: "Open tournament for all debate enthusiasts",
     lastHosted: "2024-01-10",
-    nextDate: "2025-12-16",
+    nextDate: "2025-12-17",
     participatingSchools: 32,
     targetSchools: 50,
     lastWinner: "Team Untamed",
