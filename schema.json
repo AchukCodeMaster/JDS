@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "softwareCompany",
+  "name": "Pixel Pulse",
+  "url": "https://jointdebatesociety.com",
+  "logo": "/images/PixelPulselogo2.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+256784544119",
+    "contactType": "Customer Service",
+    "areaServed": "UG",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=100083423207422&mibextid=ZbWKwL"
+  ],
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Johnson Achuk",
+      "jobTitle": "CEO & Co-Founder",
+      "image": "/images/Achuk.png",
+      "sameAs": "https://www.facebook.com/machriak.garang",
+      "worksFor": {
+        "@type": "softwareCompany",
+        "name": "Pixel Pulse"
+      }
+    }
+  ]
+}
