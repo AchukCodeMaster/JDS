@@ -1,14 +1,14 @@
 {
   "@context": "https://schema.org",
-  "@type": "softwareCompany",
-  "name": "Pixel Pulse",
+  "@type": "Debate Organization",
+  "name": "Joint Debate Society",
   "url": "https://jointdebatesociety.com",
-  "logo": "/images/PixelPulselogo2.png",
+  "logo": "/ceo/founder-executive.JPG",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+256784544119",
+    "telephone": "+211927802674",
     "contactType": "Customer Service",
-    "areaServed": "UG",
+    "areaServed": "SSD",
     "availableLanguage": "English"
   },
   "sameAs": [
@@ -17,13 +17,13 @@
   "founder": [
     {
       "@type": "Person",
-      "name": "Johnson Achuk",
-      "jobTitle": "CEO & Co-Founder",
-      "image": "/images/Achuk.png",
+      "name": "Mach Riak Garang",
+      "jobTitle": "Founder & Executive Director",
+      "image": "/ceo/founder-executive.JPG",
       "sameAs": "https://www.facebook.com/machriak.garang",
       "worksFor": {
-        "@type": "softwareCompany",
-        "name": "Pixel Pulse"
+        "@type": "Debate Organization",
+        "name": "Joint Debate Society"
       }
     }
   ]
