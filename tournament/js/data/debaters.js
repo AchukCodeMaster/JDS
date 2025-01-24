@@ -17,7 +17,7 @@ export const debaters = [
   {
     id: "3",
     name: "Barach Deng Barach",
-    image: "./tournament/images/atem.jpg",
+    image: "./tournament/images/barach.jpg",
     achievement: "2nd Overall best speaker at EADC 2024",
     description:
       "Achieved 3rd Best Speaker at East African Debate Championships",
